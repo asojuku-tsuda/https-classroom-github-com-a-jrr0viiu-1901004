@@ -9,8 +9,8 @@
     <div class="login-box">
       <h2>
 <?php
-  if(isset($_GET['indata']) == false){
-    die("数字を入力してください。");
+  if(isset($_GET['indata']) == true){
+    die("内容を入力してください。");
   }
   $data = filter_input(INPUT_GET, 'indata'); 
   if(mb_ereg('^[0-9]+$',$data) == false){
