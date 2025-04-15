@@ -9,7 +9,7 @@
     <div class="login-box">
       <h2>
 <?php
-  if(isset($_GET['indata']) == true){
+  if(empty($_GET['indata']) && ($_GET['indata'] == 0) == false){
     die("内容を入力してください。");
   }
   $data = filter_input(INPUT_GET, 'indata'); 
